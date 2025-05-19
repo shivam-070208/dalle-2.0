@@ -5,7 +5,7 @@ import { Home, Createpost } from './pages';
 const App = () => {
   return (
    <BrowserRouter>
-     <header className="w-full flex justify-between items-center sm:px-8 px-4 py-4 border-b-[#e6ebf4]">
+     <header className="w-screen flex justify-between items-center sm:px-8 px-4 py-4 border-b-[#e6ebf4]">
        <Link to="/">
          <img src={logo} alt="Shivam" className='w-23 object-contain' />
        </Link>
@@ -18,7 +18,7 @@ const App = () => {
  </Link>
      </header>
 
-     <main className='sm:p-8 px-4 py-8 w-full min-h-[calc(100vh-73px)]'>
+     <main className='sm:p-8 px-4 py-8 min-w-[100vw] w-[100vw] min-h-[calc(100vh-73px)]'>
        <Routes>
          <Route path="/" element={<Home />} />
          <Route path="/create-post" element={<Createpost />} />
