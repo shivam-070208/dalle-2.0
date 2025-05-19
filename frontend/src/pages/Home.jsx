@@ -17,9 +17,8 @@ const Home = () => {
   const [allPosts, setallPosts] = useState([])
  
     const fetchPosts = async () => {
-      
       try {
-      const response = await fetch('http://localhost:3000/api/v1/posts/fetch',{
+      const response = await fetch('https://dalle-2-0-silk.vercel.app/api/v1/posts/fetch',{
          method: 'POST',
           headers: {
             'Content-Type': 'application/json',
