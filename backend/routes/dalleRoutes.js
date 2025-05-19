@@ -35,21 +35,19 @@ router.post('/', async (req, res) => {
     for (const part of response.candidates[0].content.parts) {
       // Based on the part type, either show the text or save the image
       if (part.text) {
-        console.log(part.text);
+        // console.log(part.text);
         
       } else if (part.inlineData) {
         const imageData = part.inlineData.data;
         const buffer = Buffer.from(imageData, 'base64');
-        fs.writeFileSync('frontend/src/pages/imggen.png', buffer);
-        console.log('Image saved as gemini-native-image.png');
+      return res.status(200).json({ photo: `data:image/png;base64,${imageData}` });
       }
     }
 
-    res.status(200).json({ photo: 'gemini-native-image.png'}); // Send the image file as a response
+   
     // Send the image file as a response
   
-     // Correct response extraction
-    console.log('Response:', response);
+    
   } catch (error) {
     console.error('Error generating image:', error);
     res.status(500).json({ error: error.message || 'Something went wrong' });
