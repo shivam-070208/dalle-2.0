@@ -5,8 +5,8 @@ const Card = ({data}) => {
    <div className='w-full h-full mb-3  relative  cursor-pointer'>
   <img src={data.photo} className='w-full hover:opacity-[0.4]   peer' alt="" />
   <div className='w-full h-full absolute top-0 flex flex-col flex-wrap  peer-hover:bg-[#000000d4] peer-hover:opacity-[1] opacity-0 pointer-events-none p-3'>
-    <h1 className='text-[#ffff] text-xl uppercase font-bold'>Developed by <span className='text-[#2346e2] '>{data.name}</span></h1>
-    <p className='text-xs ml-3 line-clamp-10 leading-4 mt-2 text-[#3e3ed1]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, temporibus dignissimos natus consequatur rem nulla, commodi minima animi eaque sint odio, excepturi culpa minus suscipit quam laborum eos. Animi, magni!</p>
+    <h1 className='text-[#ffff] text-2xl uppercase font-bold'>Developed by <span className='text-[#2346e2] '>{data.name}</span></h1>
+    <p className='text-xs ml-3 line-clamp-10 leading-4 mt-2 text-[#fafafd]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, temporibus dignissimos natus consequatur rem nulla, commodi minima animi eaque sint odio, excepturi culpa minus suscipit quam laborum eos. Animi, magni!</p>
   </div>
 </div>
   )
