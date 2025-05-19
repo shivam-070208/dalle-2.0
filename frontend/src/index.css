@@ -1,0 +1,32 @@
+@import "tailwindcss";
+* {
+  font-family: "Inter", sans-serif;
+}
+
+@media screen and (min-width: 480px) {
+  .card:nth-child(7n + 1) {
+    grid-column: auto/span 2;
+    grid-row: auto/span 2;
+  }
+}
+
+.prompt::-webkit-scrollbar {
+  width: 5px;
+}
+
+.prompt::-webkit-scrollbar-thumb {
+  background-color: #666e75;
+  border-radius: 5px;
+}
+body {
+  background-color: #74a5c7;
+  color: #ffffff;
+}
+.create {
+    box-shadow:  -3px -3px 2px 1px #a5b9c8,rgba(0, 0, 0, 0.226) 1px 1px 2px 2px;
+    transition:  0.8s ease-out;
+}
+
+.create:hover {
+    box-shadow: 3px 3px 2px 1px #ced7de,inset rgba(71, 68, 68, 0.226) 1px 1px 2px 1px;
+}
