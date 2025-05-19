@@ -30,7 +30,7 @@ const Createpost = () => {
         if (response.ok) {
           setForm({ ...form, photo: data.photo }); // Set base64 image string to form.photo
         } else {
-          alert(data.error || 'Failed to generate image');
+          alert("please refine your prompt");
         }
       } catch (error) {
         alert(error);
