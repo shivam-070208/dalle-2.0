@@ -14,7 +14,8 @@ const app = express();
 
 const allowedOrigins = [
   'https://dalle-2-0-silk.vercel.app',
-  'http://localhost:5173'
+  'http://localhost:5173',
+  'https://dalle-2-0-two.vercel.app'
 ];
 app.use(cors({
   origin: function(origin, callback) {
