@@ -37,5 +37,12 @@ app.get('/', (req, res) => {
     
   res.send('Hello from DALL-E!');
 });
-   
-app.listen(3000)
+
+// Only listen if not running in Vercel serverless
+if (process.env.NODE_ENV !== 'production' && process.env.VERCEL !== '1') {
+  app.listen(3000, () => {
+    console.log('Server started on http://localhost:3000');
+  });
+}
+
+export default app;
