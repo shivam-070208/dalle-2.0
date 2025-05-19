@@ -99,7 +99,7 @@ const Createpost = () => {
               placeholder="John Doe" value={form.name} handleChange={handleChange} />
 
             <FormField LabelName="Prompt" type="text" name="prompt" placeholder="A plush toy robot sitting against a yellow wall" surprise value={form.prompt} handleChange={handlesurChange} handleSurpriseMe={handleSurpriseMe} />
-            <div className="relative photo w-[30vw] min-w-[40rem] h-[40vh] border-1 border-gray-200 rounded">
+            <div className="relative photo w-[30vw] min-w-[20rem] h-[40vh] border-1 border-gray-200 rounded">
               {form.photo ? <img src={form.photo} alt={form.prompt} className="w-full h-full object-fit rounded" /> : <img src={preview} alt="preview" className="w-full h-full object-contain rounded" />}
               {generatingImg && <div className='absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.9)] rounded-lg'><Loader /></div>}
             </div>
