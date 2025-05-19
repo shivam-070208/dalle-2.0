@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
       } else if (part.inlineData) {
         const imageData = part.inlineData.data;
         const buffer = Buffer.from(imageData, 'base64');
-        fs.writeFileSync('/Users/harsh/OneDrive/project/webdev/backend/imagegenerator/frontend/src/pages/imggen.png', buffer);
+        fs.writeFileSync('frontend/src/pages/imggen.png', buffer);
         console.log('Image saved as gemini-native-image.png');
       }
     }
