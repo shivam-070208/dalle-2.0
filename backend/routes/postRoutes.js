@@ -22,10 +22,8 @@ const upload = async (filePath) => {
 router.post("/", async (req, res) => {
     const { name, prompt, photo } = req.body;
     try {
-        const filePath =
-            "C:\\Users\\harsh\\OneDrive\\project\\webdev\\backend\\imagegenerator\\frontend" +
-            photo.split("?")[0];
-        const result = await upload(filePath);
+        
+        const result = await upload(photo);
         const postData = await PostSchema.create({
             name,
             prompt,

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { preview } from '../assets';
 import { Loader, FormField } from '../components';
 import { getRandomPrompt } from '../utils';
-import { imggen } from './script';
+
 
 const Createpost = () => {
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ const Createpost = () => {
         });
         const data = await response.json();
         if (response.ok) {
-          setForm({ ...form, photo: imggen });
+          setForm({ ...form, photo: data.photo }); // Set base64 image string to form.photo
         } else {
           alert(data.error || 'Failed to generate image');
         }
@@ -102,7 +102,6 @@ const Createpost = () => {
             <div className="relative photo w-[30vw] h-[40vh] border-1 border-gray-200 rounded">
               {form.photo ? <img src={form.photo} alt={form.prompt} className="w-full h-full object-fit rounded" /> : <img src={preview} alt="preview" className="w-full h-full object-contain rounded" />}
               {generatingImg && <div className='absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.9)] rounded-lg'><Loader /></div>}
-              
             </div>
           </div>
           <div className='mt-5 flex gap-5'>
